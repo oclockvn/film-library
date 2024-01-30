@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FirmLibrary.App
 {
-    public partial class IndexForm : Form
+    public partial class NewMovieForm : Form
     {
-        public IndexForm()
+        public NewMovieForm()
         {
             InitializeComponent();
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            new NewMovieForm().ShowDialog();
         }
     }
 }

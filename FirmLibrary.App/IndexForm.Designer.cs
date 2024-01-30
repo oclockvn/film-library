@@ -64,6 +64,7 @@
             btnNew.TabIndex = 2;
             btnNew.Text = "New";
             btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
             // 
             // lvMovie
             // 
@@ -87,6 +88,7 @@
             Controls.Add(btnClear);
             Controls.Add(txtSearch);
             Name = "IndexForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Film Library | version 1.0";
             ResumeLayout(false);
             PerformLayout();
