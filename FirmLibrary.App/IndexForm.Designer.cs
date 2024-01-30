@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem1 = new ListViewItem("Title");
-            ListViewItem listViewItem2 = new ListViewItem("Rating");
-            ListViewItem listViewItem3 = new ListViewItem("Description");
-            ListViewItem listViewItem4 = new ListViewItem("Director");
-            ListViewItem listViewItem5 = new ListViewItem("Release date");
+            ListViewItem listViewItem11 = new ListViewItem("Title");
+            ListViewItem listViewItem12 = new ListViewItem("Rating");
+            ListViewItem listViewItem13 = new ListViewItem("Description");
+            ListViewItem listViewItem14 = new ListViewItem("Director");
+            ListViewItem listViewItem15 = new ListViewItem("Release date");
             txtSearch = new TextBox();
             btnClear = new Button();
             btnNew = new Button();
@@ -45,6 +45,7 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(431, 31);
             txtSearch.TabIndex = 0;
+            txtSearch.KeyPress += txtSearch_KeyPress;
             // 
             // btnClear
             // 
@@ -54,6 +55,7 @@
             btnClear.TabIndex = 1;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnNew
             // 
@@ -70,7 +72,7 @@
             // 
             lvMovie.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lvMovie.GridLines = true;
-            lvMovie.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5 });
+            lvMovie.Items.AddRange(new ListViewItem[] { listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15 });
             lvMovie.Location = new Point(12, 60);
             lvMovie.Name = "lvMovie";
             lvMovie.Size = new Size(1252, 879);
@@ -90,6 +92,7 @@
             Name = "IndexForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Film Library | version 1.0";
+            Load += IndexForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
