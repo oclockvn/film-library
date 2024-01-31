@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmLibrary.Lib.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace FirmLibrary.App
 {
     public partial class IndexForm : Form
     {
+        private IMovieService movieService = new MovieService();
+
         public IndexForm()
         {
             InitializeComponent();
@@ -32,9 +35,10 @@ namespace FirmLibrary.App
 
         }
 
-        private void IndexForm_Load(object sender, EventArgs e)
+        private async void IndexForm_Load(object sender, EventArgs e)
         {
-
+            var movies = await movieService.SearchMoviesAsync();
+            // render list view
         }
     }
 }
